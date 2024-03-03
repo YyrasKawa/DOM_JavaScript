@@ -6,6 +6,38 @@
     <title>События в Javascript (Events)</title>
 </head>
 <body>
+    <div class="wrapper">
+        <button class="btn">Click</button>
+        <button class="btnTwo">Click 2</button>
+    </div>
+
+
+    <script>
+
+
     
+
+
+        const button = document.querySelector('.btn')
+        const buttonTwo = document.querySelector('.btnTwo')
+
+
+        const handleClick = () => {
+            console.log('click')
+    }
+
+        button.addEventListener('click', handleClick);
+        buttonTwo.addEventListener('click', handleClick);
+
+
+        buttonTwo.removeEventListener('click', handleClick)
+
+
+
+
+    </script>
+    
+
+
 </body>
 </html>
