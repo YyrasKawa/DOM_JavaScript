@@ -8,29 +8,27 @@
 <body>
     <div class="wrapper">
         <button class="btn">Click</button>
-        <button class="btnTwo">Click 2</button>
+        <button class="btn">Click 2</button>
+        <button class="btn">Click 3</button>
+        <button class="btn">Click 4</button>
     </div>
 
 
     <script>
+        // Document метод querySelector() возвращает первый элемент (Element) документа, который соответствует указанному селектору или группе селекторов. Если совпадений не найдено, возвращает значение null.
+        // Если вам нужен список всех элементов, соответствующих указанным селекторам, используйте функцию querySelectorAll().
+
+        const buttons = document.querySelectorAll('.btn');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('clicked!')
+            })
+        })
 
 
-    
 
 
-        const button = document.querySelector('.btn')
-        const buttonTwo = document.querySelector('.btnTwo')
-
-
-        const handleClick = () => {
-            console.log('click')
-    }
-
-        button.addEventListener('click', handleClick);
-        buttonTwo.addEventListener('click', handleClick);
-
-
-        buttonTwo.removeEventListener('click', handleClick)
 
 
 
